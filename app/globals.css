@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --true-white: #fefefe;
+  --off-white: #f8f9fa;
+
+  --true-black: #0a0a09;
+  --night-black: #121212;
+
+  --gs-100: #ededed;
+  --gs-200: #e8e8e8;
+  --gs-300: #cccccc;
+  --gs-400: #acacac;
+  --gs-500: #838383;
+  --gs-600: #575757;
+  --gs-700: #3b3b3b;
+  --gs-800: #252525;
+  --gs-900: #161616;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-geist: var(--font-geist-sans);
+  --font-bricolage: var(--font-bricolage-sans);
+
+  --color-true-white: var(--true-white);
+  --color-off-white: var(--off-white);
+
+  --color-true-black: var(--true-black);
+  --color-night-black: var(--night-black);
+
+  --color-gs-100: var(--gs-100);
+  --color-gs-200: var(--gs-200);
+  --color-gs-300: var(--gs-300);
+  --color-gs-400: var(--gs-400);
+  --color-gs-500: var(--gs-500);
+  --color-gs-600: var(--gs-600);
+  --color-gs-700: var(--gs-700);
+  --color-gs-800: var(--gs-800);
+  --color-gs-900: var(--gs-900);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
