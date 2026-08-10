@@ -8,7 +8,7 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`scroll-mt-24 min-h-screen ${className}`}>
+    <section id={id} className={`min-h-screen ${className}`}>
       {children}
     </section>
   );

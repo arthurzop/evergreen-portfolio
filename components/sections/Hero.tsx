@@ -50,7 +50,7 @@ export function Hero() {
           className="text-center mt-10"
         >
           Currently based in São Paulo, Brasil. <br />
-          ฅ^•ﻌ•^ฅ
+          <span className="mix-blend-multiply text-green-900/50">ฅ^•ﻌ•^ฅ</span>
         </motion.p>
       </div>
     </Section>

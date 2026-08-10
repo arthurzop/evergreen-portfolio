@@ -4,10 +4,16 @@ import SpyNav from "@/components/layout/SpyNav";
 import { RegisterToc } from "@/components/layout/RegisterToc";
 import { Hero } from "@/components/sections/Hero";
 import { Featured } from "@/components/sections/Featured";
+import { ProjectsPreview } from "@/components/sections/ProjectsPreview";
+import { WritingPreview } from "@/components/sections/WritingPreview";
+import { AboutPreview } from "@/components/sections/AboutPreview";
 
 const homeToc = [
   { id: "hero", label: "Intro" },
   { id: "featured", label: "Featured" },
+  { id: "projects", label: "Projects" },
+  { id: "writing", label: "Writing" },
+  { id: "about", label: "About" },
 ];
 
 export default function Home() {
@@ -29,6 +35,9 @@ export default function Home() {
       <SpyNav />
       <Hero />
       <Featured />
+      <ProjectsPreview />
+      <WritingPreview />
+      <AboutPreview />
     </main>
   );
 }

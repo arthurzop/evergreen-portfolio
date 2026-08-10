@@ -54,7 +54,7 @@ export default function SideNav() {
         </div>
       )}
 
-      <div className="flex flex-col bg-white/70 backdrop-blur-3xl h-auto rounded-full px-4 py-12 gap-16 justify-center items-center">
+      <div className="flex flex-col bg-off-white/70 backdrop-blur-lg h-auto rounded-full px-4 py-12 gap-16 justify-center items-center">
         <p className="text-black [writing-mode:vertical-rl] text-nowrap font-medium text-xl">
           artur medeiros
         </p>
