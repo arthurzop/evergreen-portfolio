@@ -25,26 +25,24 @@ export function ProjectHeader({ project }: { project: Project }) {
         </div>
         <div className="flex flex-col gap-2 text-sm text-gray-500">
           <span className="flex justify-between gap-6">
-            <span className="text-gs-800 uppercase">ano: </span>
+            <span className="uppercase">ano: </span>
             {project.year}
           </span>
           <span className="flex justify-between gap-2">
-            <span className="text-gs-800 uppercase">cliente:</span>{" "}
-            {project.client}
+            <span className="uppercase">cliente:</span> {project.client}
           </span>
           <span className="flex justify-between gap-8">
-            <span className="text-gs-800 uppercase">categorias: </span>{" "}
+            <span className="uppercase">categorias: </span>{" "}
             {project.category.join(" · ")}
           </span>
         </div>
       </div>
-
       <div className="w-full border border-gs-100/50" />
 
       {hasLinks && (
         <>
           <div className="flex justify-between items-center gap-4">
-            <p>Links</p>
+            <p className=" uppercase text-sm text-gray-500">Links:</p>
             <div className="flex flex-wrap gap-2 justify-end">
               {project.links.map((link) => (
                 <Link

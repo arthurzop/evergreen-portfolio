@@ -15,7 +15,7 @@ export default function ProjectsIndexPage() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:grid grid-cols-3 gap-x-6 gap-y-6  md:gap-y-12">
+      <div className="flex flex-col lg:grid grid-cols-2 gap-x-6 gap-y-6  md:gap-y-12">
         {projects.map((project) => (
           <Link
             key={project.slug}

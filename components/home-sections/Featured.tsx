@@ -39,7 +39,7 @@ export function Featured() {
           <p className="text-gs-500 uppercase tracking-wider text-sm">
             Featured:
           </p>
-          <h2 className="text-6xl font-bold  capitalize">the thirteen</h2>
+          <h2 className="text-6xl font-bold capitalize">the thirteen</h2>
           <p className="text-gs-400 hover:text-gs-600 flex items-center gap-2 w-fit">
             <span>↳</span> um arquivo visual curado para referências de design.
           </p>
