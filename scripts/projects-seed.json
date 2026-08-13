@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "slug": "suporte-de-domingo",
+    "client": "Suporte de Domingo",
+    "title": "Suporte de Domingo",
+    "category": ["Branding", "Direção de Design", "Site"],
+    "description": "Projeto contínuo de construção e evolução da identidade da Suporte de Domingo, atuando como base estrutural de design, produto e comunicação da empresa. O trabalho envolve direção criativa, definição de sistemas visuais, padronização de interfaces e desenvolvimento de sites institucionais e comerciais.\n\nAtuo como lead designer e pilar central do design da empresa, sendo responsável pela estratégia visual, consistência de marca e tomada de decisões de experiência do usuário. O projeto inclui criação e manutenção de design systems, definição de linguagem visual, refinamento de produtos digitais e evolução constante da identidade da marca no ambiente digital.\n\nAlém da parte visual, também participo diretamente da estruturação de produtos, organização de fluxos e direcionamento estético e funcional das entregas, garantindo coerência entre branding, interface e comunicação.",
+    "year": "2024-now",
+    "cover": "/images/suporte-de-domingo/IMG-01.png",
+    "images": [
+      "/images/suporte-de-domingo/IMG-01.png",
+      "/images/suporte-de-domingo/IMG-02.png",
+      "/images/suporte-de-domingo/IMG-03.png",
+      "/images/suporte-de-domingo/IMG-04.png",
+      "/images/suporte-de-domingo/IMG-05.png",
+      "/images/suporte-de-domingo/IMG-06.png"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "code-trouble",
+    "client": "Code Trouble",
+    "title": "Code Trouble",
+    "category": ["Aplicação Web e Mobile", "Branding", "UX/UI"],
+    "description": "Plataforma colaborativa inspirada em fóruns de dúvidas e artigos técnicos. O projeto envolveu design responsivo com a metodologia 'Atomic Design', identidade visual própria e foco na experiência do usuário, integrações e testes de usabilidade.",
+    "year": "2024",
+    "cover": "/images/code-trouble/IMG-01.png",
+    "images": [
+      "/images/code-trouble/IMG-01.png",
+      "/images/code-trouble/IMG-02.png",
+      "/images/code-trouble/IMG-03.png"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "ascending",
+    "client": "Ascending Consultoria e Treinamentos",
+    "title": "Ascending",
+    "category": ["Branding", "Mockups", "Estratégia"],
+    "description": "Rebranding com foco em modernização e consistência, estruturando a marca para atuação em consultoria e educação corporativa, com aplicações voltadas para ambientes institucionais e digitais.",
+    "year": "2026",
+    "cover": "/images/ascending/IMG-01.png",
+    "images": [
+      "/images/ascending/IMG-01.png",
+      "/images/ascending/IMG-02.png",
+      "/images/ascending/IMG-03.png",
+      "/images/ascending/IMG-04.png",
+      "/images/ascending/IMG-05.png"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "prof-correa",
+    "client": "Professor Corrêa",
+    "title": "Portfólio Professor Corrêa",
+    "category": ["Landing Page", "Portfólio", "Branding"],
+    "description": "Landing page criada para apresentar a identidade visual e marca pessoal do Professor Corrêa. O projeto teve como foco acessibilidade, padronização de componentes e alto desempenho na web.",
+    "year": "2024-2025",
+    "cover": "/images/prof-correa/IMG-01.png",
+    "images": [
+      "/images/prof-correa/IMG-01.png",
+      "/images/prof-correa/IMG-02.png",
+      "/images/prof-correa/IMG-03.png",
+      "/images/prof-correa/IMG-04.png",
+      "/images/prof-correa/IMG-05.png"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "sante",
+    "client": "Clínica Sante",
+    "title": "Clínica Sante",
+    "category": ["Landing Page", "Branding", "UX/UI"],
+    "description": "Projeto de landing page para uma clínica odontológica, com foco em transmitir credibilidade, acessibilidade e confiança por meio do design, aliado a um sistema de identidade visual consistente.",
+    "year": "2025",
+    "cover": "/images/sante/IMG-01.png",
+    "images": [
+      "/images/sante/IMG-01.png",
+      "/images/sante/IMG-02.png",
+      "/images/sante/IMG-03.png"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "joys-gourmet",
+    "client": "Joy’s Gourmet",
+    "title": "Joy’s Gourmet",
+    "category": ["Branding", "Direção Criativa", "Produto"],
+    "description": "Projeto de identidade visual para a Joy’s Gourmet, especializada em catering para eventos corporativos. O trabalho teve foco em sofisticação, elegância e credibilidade, com aplicação da marca em materiais físicos, uniformes, cardápios e base visual para futuras expansões como site e produtos físicos.",
+    "year": "2025",
+    "cover": "/images/joys-gourmet/IMG-01.png",
+    "images": [
+      "/images/joys-gourmet/IMG-01.png",
+      "/images/joys-gourmet/IMG-02.png",
+      "/images/joys-gourmet/IMG-03.png",
+      "/images/joys-gourmet/IMG-04.png"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "teacher-marcelli",
+    "client": "Teacher Marcelli",
+    "title": "Teacher Marcelli",
+    "category": ["Branding", "Landing Page", "Estratégia"],
+    "description": "Projeto focado na estruturação visual e estratégica da professora de inglês. Desenvolvimento da identidade visual, definição de hierarquia de conteúdo, organização da oferta e criação da landing page com foco em clareza, acolhimento e conversão.",
+    "year": "2025",
+    "cover": "/images/teacher-marcelli/IMG-01.png",
+    "images": [
+      "/images/teacher-marcelli/IMG-01.png",
+      "/images/teacher-marcelli/IMG-02.png",
+      "/images/teacher-marcelli/IMG-03.png",
+      "/images/teacher-marcelli/IMG-04.png"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "luiz-brito",
+    "client": "Luiz Brito",
+    "title": "Luiz Brito",
+    "category": ["Branding", "Portfólio", "Landing Page"],
+    "description": "Mini branding e desenvolvimento de portfólio para profissional de Cloud, DevOps e infraestrutura. O projeto focou em clareza técnica, organização de conteúdo e posicionamento profissional, com uma interface objetiva e alinhada ao contexto de tecnologia.",
+    "year": "2025",
+    "cover": "/images/luiz-brito/IMG-01.png",
+    "images": [
+      "/images/luiz-brito/IMG-01.png",
+      "/images/luiz-brito/IMG-02.png",
+      "/images/luiz-brito/IMG-03.png"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "linkcore",
+    "client": "Linkcore",
+    "title": "Linkcore",
+    "category": ["Branding", "Site Institucional", "Infraestrutura"],
+    "description": "Projeto de identidade visual e site institucional para a Linkcore, empresa voltada para infraestrutura e soluções técnicas em ambientes digitais. O trabalho envolveu a construção completa da presença de marca, alinhando posicionamento estratégico, linguagem visual e arquitetura de informação do site.\n\nA atuação foi centrada na criação de um sistema visual consistente e funcional, capaz de comunicar robustez técnica e confiabilidade. O site foi estruturado com foco em clareza de serviços, hierarquia de informação e performance, refletindo o contexto de infraestrutura e soluções corporativas.\n\nTambém houve definição de direção de branding, explorando uma estética mais técnica e minimalista, com ênfase em legibilidade, escala e consistência visual entre interfaces e aplicações institucionais.",
+    "year": "2026",
+    "cover": "/images/link-core/IMG-01.png",
+    "images": [
+      "/images/link-core/IMG-01.png",
+      "/images/link-core/IMG-02.png",
+      "/images/link-core/IMG-03.png"
+    ]
+  }
+]

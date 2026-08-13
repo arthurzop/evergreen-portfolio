@@ -42,13 +42,14 @@ export function ProjectsPreview() {
   return (
     <Section
       id="projects"
-      className="flex flex-col justify-center px-64 gap-8 font-geist  bg-linear-to-b from-off-white/0 via-off-white/50 to-off-white/80"
+      className="flex flex-col justify-center py-24 md:py-0 px-8 lg:px-64 gap-8 font-geist  bg-linear-to-b from-off-white/0 via-off-white/50 to-off-white/80"
     >
       <div className="font-bricolage flex flex-col gap-2">
-        <h2 className="text-6xl font-bold capitalize">/projects</h2>
+        <h2 className="text-6xl font-bold capitalize">/projetos</h2>
         <p className="text-gs-400 hover:text-gs-600 flex items-center gap-2 w-fit">
-          <span>↳</span> a collection of products, identities and digital
-          experiences shaped through research, systems and thoughtful execution.
+          <span>↳</span> uma coleção de produtos, identidades e experiências
+          digitais construídas a partir de pesquisa, sistemas e execução
+          cuidadosa.
         </p>
       </div>
 
@@ -57,7 +58,7 @@ export function ProjectsPreview() {
         variants={container}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
-        className="grid grid-cols-3 gap-6"
+        className="flex flex-col gap-4 md:grid grid-cols-3 md:gap-6"
       >
         {projects.map((project) => (
           <motion.div key={project.slug} variants={card}>
@@ -70,9 +71,7 @@ export function ProjectsPreview() {
                   <h3 className="font-semibold text-2xl font-bricolage capitalize">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-gray-500">
-                    {project.description}
-                  </p>
+                  <p className="text-sm text-gray-500">{project.description}</p>
                 </div>
                 <span className="inline-flex items-center gap-1 text-sm mt-2 text-gray-700 group-hover:text-green-700 transition-colors">
                   view <ArrowUpRight size={14} />

@@ -1,11 +1,11 @@
-// components/sections/AboutPreview.tsx
 "use client";
 import { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { ArrowUpRight, Copy, Check } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import Image from "next/image";
-import artur from "@/public/artur.jpg";
+import artur from "@/public/artur.jpeg";
+import Link from "next/link";
 
 const links = [
   { label: "linkedin", href: "https://linkedin.com/in/arthurzop" },
@@ -30,12 +30,13 @@ export function AboutPreview() {
   return (
     <Section
       id="about"
-      className="flex flex-col justify-center px-64 gap-8 font-geist bg-off-white/80 items-center"
+      className="py-24 md:py-0 flex flex-col justify-center px-8 lg:px-64 gap-8 font-geist bg-off-white/80 items-center"
     >
       <div className="font-bricolage flex flex-col gap-2 w-full">
-        <h2 className="text-6xl font-bold capitalize">/about me</h2>
+        <h2 className="text-6xl font-bold capitalize">/sobre mim</h2>
         <p className="text-gs-400 hover:text-gs-600 flex items-center gap-2 w-fit">
-          <span>↳</span> a ui &amp; product designer based in são paulo, brazil.
+          <span>↳</span> um UI &amp; Product Designer baseado em São Paulo,
+          Brasil.
         </p>
       </div>
 
@@ -44,9 +45,9 @@ export function AboutPreview() {
         initial={{ opacity: 0, y: 24 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="grid grid-cols-[1fr_1.6fr] gap-12 items-start"
+        className="flex flex-col lg:flex-row justify-between w-full gap-12"
       >
-        <div className="relative aspect-video w-150 h-full rounded-xl overflow-hidden">
+        <div className="relative aspect-video w-full h-full rounded-xl overflow-hidden">
           <Image
             src={artur}
             alt="me :)"
@@ -56,30 +57,31 @@ export function AboutPreview() {
           />
         </div>
 
-        <div className="flex flex-col gap-6 justify-between h-full w-150">
-          <div>
+        <div className="flex flex-col justify-between lg:w-200">
+          <div className="">
             <h3 className="font-bricolage font-semibold text-2xl mb-3 capitalize">
               hi! im artur medeiros
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              i'm a ui &amp; product designer focused on creating products that
-              balance strategic thinking with visual clarity. my work spans
-              product design, design systems, branding and editorial
-              experiences, always starting with understanding the problem before
-              designing the interface.
+              Sou UI &amp; Product Designer e trabalho na criação de produtos
+              que equilibram pensamento estratégico e clareza visual. Meu
+              trabalho passa por Product Design, Design Systems, Branding e
+              experiências editoriais, sempre começando pela tentativa de
+              entender o problema antes de desenhar a interface.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              beyond client work, i see design as a continuous practice of
-              research and documentation. that's why this portfolio brings
-              together projects, writing and experiments, building an evolving
-              archive of ideas, processes and visual explorations.
+              Além dos projetos para clientes, vejo o design como uma prática
+              contínua de pesquisa, experimentação e documentação. É por isso
+              que este portfólio reúne projetos, textos e experimentos, formando
+              um arquivo em constante evolução de ideias, processos e
+              explorações visuais.
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 ">
-            <div className="flex  gap-2 w-full justify-between">
+          <div className="flex flex-col gap-4 h-fit">
+            <div className="flex flex-col md:flex-row pt-4 gap-2 lg:w-full justify-between">
               {links.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   target="_blank"
@@ -87,7 +89,7 @@ export function AboutPreview() {
                   className="w-full inline-flex items-center gap-1 text-sm bg-gs-200 hover:bg-gs-300 transition-colors rounded-full px-8 py-2 justify-center"
                 >
                   {link.label} <ArrowUpRight size={14} />
-                </a>
+                </Link>
               ))}
             </div>
 

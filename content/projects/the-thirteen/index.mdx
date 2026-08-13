@@ -1,0 +1,64 @@
+---
+slug: "the-thirteen"
+title: "The Thirteen"
+client: "Personal Project"
+category: ["Product Design", "UI Design", "Information Architecture"]
+type: "Personal Project"
+year: "2026"
+cover: "/images/the-thirteen/IMG-01.png"
+images:
+  [
+    "/images/the-thirteen/IMG-01.png",
+    "/images/the-thirteen/IMG-02.png",
+    "/images/the-thirteen/IMG-03.png",
+  ]
+---
+
+
+## 01. Overview & Propósito
+
+O The Thirteen é um arquivo visual de referências de design desenvolvido a partir de um problema prático no meu fluxo de estudo e trabalho: a ausência de um sistema eficiente para guardar, estruturar e reencontrar referências visuais relevantes. Ao longo do tempo, acumulei projetos, identidades, livros, ferramentas e soluções de interface espalhados entre bookmarks, pastas locais, Notion e plataformas como Pinterest e Are.na, um cenário em que a recuperação do conteúdo se tornava quase impossível conforme o volume aumentava.
+
+O projeto nasceu para estruturar esse repertório de forma perene. O The Thirteen não foi desenhado para funcionar como uma rede social, uma ferramenta de descoberta coletiva ou uma plataforma com métricas de engajamento. Trata-se de um arquivo público de curadoria estritamente individual e manual, onde cada entrada recebe contexto e categorização própria para garantir sua utilidade em consultas futuras.
+
+> A proposta não é acumular o maior número possível de imagens, mas garantir o resgate das referências certas no momento em que uma decisão de design precisa ser tomada.
+
+## 02. De Coleção para Sistema de Informação
+
+Uma imagem isolada perde valor rapidamente se não mantiver os dados que justificam a sua preservação. Por essa razão, o The Thirteen foi estruturado desde o início como um banco de conhecimento visual e não apenas como uma galeria gráfica. Cada registro é tratado no schema como uma entidade isolada que armazena título, subtítulo, descrição analítica, tipo, área, tags transversais, acervo de mídias, links originais e metadados.
+
+Esse modelo permitiu introduzir o conceito de referências parciais. Em diversos casos, o objeto de estudo não é o projeto em sua totalidade, mas um recorte específico como um sistema de navegação, um padrão de animação ou uma solução tipográfica. A modelagem do sistema permite catalogar um mesmo elemento focando no aspecto exato que merece ser preservado, transformando a biblioteca em um repositório de ideias práticas.
+
+## 03. Critérios de Curadoria
+
+A curadoria do arquivo opera sob critérios de utilidade técnica e repertório, renegando a lógica da escolha baseada exclusivamente no apelo estético superficial. A entrada de um item é condicionada à presença de algum valor claro de estudo, seja pela excelência na execução técnica, pela inteligência na arquitetura da informação, pelo apuro na direção de arte ou pela solução de um problema complexo de interface.
+
+O processo de triagem prioriza a densidade e o contexto. Materiais que se limitam a reproduzir modismos visuais sem oferecer diferenciais analíticos são descartados, da mesma forma que itens desacompanhados de sua autoria ou contexto original são evitados. O objetivo central é manter um padrão de qualidade que assegure a relevância do arquivo à medida que o volume de dados se expande.
+
+## 04. Arquitetura de Taxonomia e Busca
+
+A organização do acervo é dividida em três camadas estruturais no banco de dados para permitir a localização de um item por múltiplos caminhos:
+
+- **Type:** A categoria de nível mais alto que define a natureza do registro, englobando valores como Website, Product, Brand, Studio, Designer, Tool, Font, Book e Visual Asset.
+- **Area:** A subcategoria vinculada rigidamente ao Type pai para determinar o nicho técnico da referência, abrangendo campos como Branding, UI, UX, Typography, Editorial e Motion.
+- **Tag:** A camada livre e transversal que conecta registros de Types distintos por meio de atributos visuais compartilhados, como Dark Mode, Minimalist e Design System.
+
+O mecanismo de busca é o elemento central dessa estrutura, permitindo a varredura em tempo real nos campos de título, descrição, tipo, áreas e tags com tratamento de debounce para evitar chamadas desnecessárias à API. Essa taxonomia garante que a busca não dependa do nome exato do projeto para encontrar a referência desejada.
+
+## 05. Interface e Sistema Visual
+
+A linguagem visual do sistema foi projetada para se manter contida, garantindo que o conteúdo curado ocupe o papel principal na tela. A interface adota um tom escuro fixo, tipografia neutra utilizando a fonte Geist e uma estrutura espacial limpa baseada em tokens de tons de cinza do Tailwind CSS.
+
+A exploração do acervo ocorre na Home através de um grid no estilo masonry que pode ser alternado para visualização em lista. A exibição detalhada dos itens é resolvida por meio de modais acoplados à tela de navegação, permitindo que o usuário analise as galerias de imagens, leia a nota descritiva, consulte os metadados e acesse os links externos sem perder o estado atual da sua navegação.
+
+## 06. Engenharia e Infraestrutura
+
+A aplicação foi construída com Next.js no modelo App Router e TypeScript, utilizando Server Components e Server Actions para gerenciar as mutações de dados sem a necessidade de manter rotas tradicionais de API. A camada de persistência utiliza MongoDB Atlas orquestrado pelo Prisma ORM, adotando composite types para embutir galerias, links e metadados diretamente no documento da referência e otimizar as consultas no banco.
+
+A gestão do acervo é feita por um painel administrativo protegido por autenticação via cookie httpOnly e hash JWT, contando com rotinas de validação de dados desenvolvidas com Zod e contadores de caracteres em tempo real no client. O fluxo de mídias utiliza compressão automática no navegador para o formato WebP antes do envio ao Cloudinary, que gerencia a entrega otimizada de resoluções e produz dinamicamente o efeito de fundo desfocado utilizado nos modais.
+
+## 07. Aprendizados e Estado do Projeto
+
+O desenvolvimento do The Thirteen demonstrou que a organização de um arquivo de referências é essencialmente um problema de arquitetura de informação e engenharia de dados. A experiência do usuário nesse tipo de produto depende diretamente da rigidez da taxonomia e do cuidado aplicado na modelagem do banco de dados, provando que a curadoria é uma disciplina de design por si só.
+
+Atualmente, o projeto está publicado, totalmente funcional e em uso constante na minha rotina de trabalho. A infraestrutura de código, banco de dados e interface encontra-se consolidada, permitindo que o arquivo continue expandindo seu acervo de referências continuamente sem exigir alterações na estrutura principal do produto.

@@ -1,4 +1,3 @@
-// components/sections/WritingPreview.tsx
 "use client";
 import { useRef } from "react";
 import Link from "next/link";
@@ -42,13 +41,13 @@ export function WritingPreview() {
   return (
     <Section
       id="writing"
-      className="flex flex-col justify-center px-64 gap-8 font-geist bg-off-white/80"
+      className="flex flex-col justify-center px-8 lg:px-64 gap-8 font-geist bg-off-white/80"
     >
       <div className="font-bricolage flex flex-col gap-2">
-        <h2 className="text-6xl font-bold capitalize">/writing</h2>
+        <h2 className="text-6xl font-bold capitalize">/escrita</h2>
         <p className="text-gs-400 hover:text-gs-600 flex items-center gap-2 w-fit">
-          <span>↳</span> essays, research and reflections exploring design
-          beyond the interface.
+          <span>↳</span> ensaios, pesquisas e reflexões sobre design para além
+          da interface.
         </p>
       </div>
 
@@ -63,7 +62,7 @@ export function WritingPreview() {
           <motion.div key={article.slug} variants={card}>
             <Link
               href={`/writing/${article.slug}`}
-              className="group flex gap-6 items-center"
+              className="group flex flex-col md:flex-row gap-6 md:items-center"
             >
               <div className="aspect-video w-64 shrink-0 bg-neutral-700 rounded-xl flex items-center justify-center text-white/60 text-sm transition-transform group-hover:scale-[1.01]">
                 {article.title}

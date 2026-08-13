@@ -11,7 +11,7 @@ export function useScrollSpy(ids: string[]) {
           if (entry.isIntersecting) setActiveId(entry.target.id);
         });
       },
-      { rootMargin: "-20% 0px -70% 0px", threshold: 0 },
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
     );
 
     ids.forEach((id) => {
@@ -19,7 +19,22 @@ export function useScrollSpy(ids: string[]) {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    function handleScrollEnd() {
+      const reachedBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+
+      if (reachedBottom && ids.length) {
+        setActiveId(ids[ids.length - 1]);
+      }
+    }
+
+    window.addEventListener("scroll", handleScrollEnd, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScrollEnd);
+    };
   }, [ids]);
 
   return activeId;

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --true-white: #fefefe;
@@ -41,4 +42,14 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.article-columns h2,
+.article-columns h3,
+.article-columns h4,
+.article-columns blockquote,
+.article-columns ul,
+.article-columns ol,
+.article-columns img {
+  break-inside: avoid;
 }

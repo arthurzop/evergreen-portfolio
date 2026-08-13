@@ -3,6 +3,8 @@ import { Geist, Bricolage_Grotesque } from "next/font/google";
 import SideNav from "@/components/layout/SideNav";
 import { TocProvider } from "@/lib/toc-context";
 import "./globals.css";
+import Footer from "@/components/home-sections/Footer";
+import { GrainGradient } from "@paper-design/shaders-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,10 +48,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${bricolage.variable}`}
     >
       <body className="min-h-full flex flex-col">
+        <GrainGradient
+          width="100%"
+          height="100%"
+          colors={["#DAD7CD", "#A3B18A", "#588157", "#3A5A40", "#344E41"]}
+          colorBack="#BBC6BB20"
+          softness={2}
+          intensity={0.3}
+          noise={0.2}
+          shape="corners"
+          speed={1}
+          className="fixed -z-10 inset-0 opacity-60"
+        />
         <TocProvider>
           <SideNav />
           {children}
         </TocProvider>
+        <Footer />
       </body>
     </html>
   );

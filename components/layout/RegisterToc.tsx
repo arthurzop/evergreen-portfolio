@@ -9,7 +9,7 @@ export function RegisterToc({ items }: { items: TocItem[] }) {
 
   useEffect(() => {
     setItems(items);
-    return () => setItems([]); // limpa ao sair da página
+    return () => setItems([]); 
   }, [items]);
 
   return null;
