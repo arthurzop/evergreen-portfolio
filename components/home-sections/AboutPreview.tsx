@@ -30,7 +30,7 @@ export function AboutPreview() {
   return (
     <Section
       id="about"
-      className="py-24 md:py-0 flex flex-col justify-center px-8 lg:px-64 gap-8 font-geist bg-off-white/80 items-center"
+      className="py-24 md:py-0 flex flex-col justify-center px-8 lg:px-64 gap-8 font-geist bg-off-white/50 items-center"
     >
       <div className="font-bricolage flex flex-col gap-2 w-full">
         <h2 className="text-6xl font-bold capitalize">/sobre mim</h2>

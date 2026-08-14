@@ -9,8 +9,8 @@ const navItems = [
   { href: "/", icon: L.Home, label: "Home" },
   { href: "/projects", icon: L.Globe, label: "Projects" },
   { href: "/writing", icon: L.Feather, label: "Writing" },
-  { href: "/lab", icon: L.FlaskConical, label: "Lab" },
-  { href: "/about", icon: L.Info, label: "About me" },
+  // { href: "/lab", icon: L.FlaskConical, label: "Lab" },
+  { href: "/#about", icon: L.Info, label: "About me" },
 ];
 
 const container: Variants = {

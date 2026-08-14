@@ -15,44 +15,60 @@ export function ProjectNav({
   if (!prev && !next) return null;
 
   return (
-    <nav
-      className={`mx-4 flex items-center justify-between rounded-full border border-white/20 bg-white/10 py-4 px-8 shadow-xl backdrop-blur-md ${
-        fixed ? "md:fixed md:inset-x-100 top-8 z-20" : ""
-      }`}
-    >
-      {prev ? (
+    <div className="fixed flex gap-8 mx-4 items-center inset-x-64 top-8 justify-between">
+      <nav className="flex items-center justify-between rounded-full border border-white/20 bg-white/10 py-4 px-8 shadow-lg backdrop-blur-md">
         <Link
-          href={`/projects/${prev.slug}`}
-          className="flex items-center gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors"
+          href="/projects"
+          className="text-sm text-gray-600 hover:text-green-700 transition-colors"
         >
           <span>
-            <span className="block text-xs text-gray-400">Anterior</span>
+            <span className="block text-xs text-gray-500 uppercase">Todos os</span>
             <span className="flex items-center gap-1">
               <ArrowLeft size={14} />
-              {prev.title}
+              Projetos
             </span>
           </span>
         </Link>
-      ) : (
-        <span />
-      )}
+      </nav>
+      <nav className="flex items-center justify-between rounded-full border border-white/20 bg-white/10 py-4 px-8 shadow-xl backdrop-blur-md w-100">
+        {prev ? (
+          <Link
+            href={`/projects/${prev.slug}`}
+            className="flex items-center gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors "
+          >
+            <span>
+              <span className="block text-xs text-gray-500 uppercase">
+                Anterior
+              </span>
+              <span className="flex items-center gap-1">
+                <ArrowLeft size={14} />
+                {prev.title}
+              </span>
+            </span>
+          </Link>
+        ) : (
+          <span />
+        )}
 
-      {next ? (
-        <Link
-          href={`/projects/${next.slug}`}
-          className="flex items-center gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors text-right"
-        >
-          <span>
-            <span className="block text-xs text-gray-400">Próximo</span>
-            <span className="flex items-center gap-1">
-              {next.title}
-              <ArrowRight size={14} />
+        {next ? (
+          <Link
+            href={`/projects/${next.slug}`}
+            className="flex items-center gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors text-right"
+          >
+            <span>
+              <span className="block text-xs text-gray-500 uppercase">
+                Próximo
+              </span>
+              <span className="flex items-center gap-1">
+                {next.title}
+                <ArrowRight size={14} />
+              </span>
             </span>
-          </span>
-        </Link>
-      ) : (
-        <span />
-      )}
-    </nav>
+          </Link>
+        ) : (
+          <span />
+        )}
+      </nav>
+    </div>
   );
 }

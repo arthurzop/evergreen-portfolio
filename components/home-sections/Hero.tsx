@@ -30,7 +30,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-        className="flex flex-col md:text-lg px-4 text-center items-center"
+        className="flex flex-col md:text-lg px-4 text-center items-center text-gs-800"
       >
         <p>
           Eu desenvolvo produtos digitais unindo pesquisa, sistemas e pensamento
@@ -38,7 +38,7 @@ export function Hero() {
         </p>
         <p>
           Atualmente construindo um portfólio{" "}
-          <span className="hover:text-green-700 hover:underline">
+          <span className="hover:text-green-700 ">
             evergreen
           </span>{" "}
           de projetos, textos e experimentos.
@@ -49,7 +49,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-          className="text-center  md:mt-10"
+          className="text-center text-gs-700 md:mt-10"
         >
           Currently based in São Paulo, Brasil. <br />
           <span className="hidden md:block mix-blend-multiply text-green-900/50">

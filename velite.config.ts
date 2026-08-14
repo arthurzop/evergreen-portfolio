@@ -12,7 +12,7 @@ function extractToc(raw: string) {
 
     const level = match[1].length;
     const label = match[2].trim();
-    const id = slugger.slug(label); // sempre gera, mesmo fora do nível 2
+    const id = slugger.slug(label); 
 
     if (level === 2) toc.push({ id, label });
   }
@@ -24,12 +24,12 @@ const projects = s
   .object({
     slug: s.slug("projects"),
     title: s.string(),
+    description: s.string(),
     client: s.string(),
     category: s.array(s.string()),
     type: s.string().default("Client Work"),
     year: s.string(),
-    cover: s.string(),
-    images: s.array(s.string()).default([]),
+    cover: s.image(),
     links: s
       .array(s.object({ label: s.string(), url: s.string() }))
       .default([]),

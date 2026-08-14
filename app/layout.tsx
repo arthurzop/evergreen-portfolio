@@ -47,7 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${geistSans.variable} ${bricolage.variable}`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col text-night-black">
         <GrainGradient
           width="100%"
           height="100%"

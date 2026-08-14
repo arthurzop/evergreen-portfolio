@@ -1,29 +1,12 @@
 "use client";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, type Variants } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/layout/Section";
+import { projects } from "#site/content";
 import LinkButton from "../ui/LinkButton";
-
-// placeholder — troca por dado real quando o Velite entrar em cena
-const projects = [
-  {
-    slug: "suporte-de-domingo",
-    title: "suporte de domingo",
-    description: "Tech branding, website and visual identity.",
-  },
-  {
-    slug: "teacher-marcelli",
-    title: "teacher marcelli",
-    description: "Branding and visual identity for an educator.",
-  },
-  {
-    slug: "prof-correa",
-    title: "prof correa",
-    description: "Visual identity and digital presence.",
-  },
-];
 
 const container: Variants = {
   hidden: {},
@@ -38,11 +21,12 @@ const card: Variants = {
 export function ProjectsPreview() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-15%" });
+  const featured = projects.slice(0, 3);
 
   return (
     <Section
       id="projects"
-      className="flex flex-col justify-center py-24 md:py-0 px-8 lg:px-64 gap-8 font-geist  bg-linear-to-b from-off-white/0 via-off-white/50 to-off-white/80"
+      className="flex flex-col justify-center py-24 md:py-0 px-8 lg:px-64 gap-8 font-geist bg-linear-to-b to-off-white/50"
     >
       <div className="font-bricolage flex flex-col gap-2">
         <h2 className="text-6xl font-bold capitalize">/projetos</h2>
@@ -60,11 +44,17 @@ export function ProjectsPreview() {
         animate={isInView ? "show" : "hidden"}
         className="flex flex-col gap-4 md:grid grid-cols-3 md:gap-6"
       >
-        {projects.map((project) => (
+        {featured.map((project) => (
           <motion.div key={project.slug} variants={card}>
             <Link href={`/projects/${project.slug}`} className="group block">
-              <div className="aspect-video bg-neutral-700 rounded-xl mb-4 flex items-center justify-center text-white/60 text-sm transition-transform group-hover:scale-[1.01]">
-                {project.title}
+              <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
+                <Image
+                  src={project.cover.src}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-[1.01]"
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                />
               </div>
               <div className="flex justify-between items-end">
                 <div className="flex flex-col">
@@ -83,7 +73,10 @@ export function ProjectsPreview() {
       </motion.div>
 
       <div className="flex items-center justify-end">
-        <LinkButton text="or view all projects" href="/projects"></LinkButton>
+        <LinkButton
+          text="ver todos os projetos"
+          href="/projects"
+        ></LinkButton>
       </div>
     </Section>
   );

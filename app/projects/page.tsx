@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "#site/content";
 
@@ -22,8 +23,14 @@ export default function ProjectsIndexPage() {
             href={`/projects/${project.slug}`}
             className="group block"
           >
-            <div className="aspect-video bg-neutral-700 rounded-xl mb-4 flex items-center justify-center text-white/60 text-sm transition-transform group-hover:scale-[1.01]">
-              {project.title}
+            <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
+              <Image
+                src={project.cover.src}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform group-hover:scale-[1.03]"
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              />
             </div>
 
             <div className="flex justify-between items-end">

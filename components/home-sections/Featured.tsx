@@ -4,7 +4,7 @@ import { motion, useInView } from "motion/react";
 import { Section } from "@/components/layout/Section";
 import LinkButton from "@/components/ui/LinkButton";
 import Image from "next/image";
-import cover from "@/content/projects/the-thirteen/cover.jpg";
+import cover from "@/content/projects/the-thirteen/cover.png";
 
 const stats = [
   {
@@ -34,7 +34,7 @@ export function Featured() {
       id="featured"
       className="flex flex-col justify-center px-4 lg:px-64 font-geist"
     >
-      <div className="flex flex-col gap-4 lg:gap-8 bg-off-white/50 backdrop-blur-lg p-8 rounded-2xl border border-gs-200">
+      <div className="flex flex-col gap-4 lg:gap-8 bg-off-white/20 backdrop-blur-lg p-8 rounded-2xl border border-gs-200">
         <div className="font-bricolage flex flex-col gap-2">
           <p className="text-gs-500 uppercase tracking-wider text-sm">
             Featured:
@@ -60,7 +60,7 @@ export function Featured() {
 
           <div className="flex flex-col gap-6 h-full justify-between">
             <div>
-              <h3 className="font-semibold mb-2 text-3xl font-bricolage  capitalize">
+              <h3 className="font-semibold mb-2 text-3xl font-bricolage first-letter:capitalize">
                 sobre o projeto
               </h3>
               <p className="text-gs-700 leading-relaxed">
@@ -69,10 +69,12 @@ export function Featured() {
                 reúne identidades visuais, interfaces, tipografia, trabalhos
                 editoriais e outras referências em um sistema estruturado para
                 exploração e curadoria contínua.
-                <br /> <br />O projeto investiga como uma coleção pessoal pode
-                se transformar em uma ferramenta de design, organizando
-                referências dispersas em uma linguagem visual que pode ser
-                revisitada, expandida e conectada ao longo do tempo.
+              </p>
+              <p className="text-gs-700 leading-relaxed">
+                O projeto investiga como uma coleção pessoal pode se transformar
+                em uma ferramenta de design, organizando referências dispersas
+                em uma linguagem visual que pode ser revisitada, expandida e
+                conectada ao longo do tempo.
               </p>
             </div>
 
@@ -87,10 +89,12 @@ export function Featured() {
               ))}
             </div>
 
-            <LinkButton
-              text="ver projeto completo"
-              href="projects/the-thirteen"
-            />
+            <div className="w-full flex justify-end">
+              <LinkButton
+                text="ver projeto completo"
+                href="projects/the-thirteen"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
