@@ -43,7 +43,7 @@ export default function SideNav() {
             <p className="text-xl font-semibold text-green-500">{number}</p>
           </div>
         )}
-        <div className="flex flex-col bg-white/70 backdrop-blur-3xl h-auto rounded-full px-4 py-12 gap-16 justify-center items-center">
+        <div className="flex flex-col h-auto rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm px-3 py-12 gap-16 justify-center items-center">
           <p className="text-black [writing-mode:vertical-rl] text-nowrap font-medium text-xl">
             artur medeiros
           </p>

@@ -5,7 +5,7 @@ import { Hero } from "@/components/home-sections/Hero";
 import { Featured } from "@/components/home-sections/Featured";
 import { ProjectsPreview } from "@/components/home-sections/ProjectsPreview";
 import { WritingPreview } from "@/components/home-sections/WritingPreview";
-import { AboutPreview } from "@/components/home-sections/AboutPreview";
+import { AboutPreview } from "@/components/home-sections/AboutSection";
 
 const homeToc = [
   { id: "hero", label: "Intro" },

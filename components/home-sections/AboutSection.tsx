@@ -7,6 +7,7 @@ import Image from "next/image";
 import artur from "@/public/artur.jpeg";
 import Link from "next/link";
 
+
 const links = [
   { label: "linkedin", href: "https://linkedin.com/in/arthurzop" },
   { label: "substack", href: "https://substack.com/@arthurzop" },
@@ -59,22 +60,25 @@ export function AboutPreview() {
 
         <div className="flex flex-col justify-between lg:w-200">
           <div className="">
-            <h3 className="font-bricolage font-semibold text-2xl mb-3 capitalize">
-              hi! im artur medeiros
+            <h3 className="font-bricolage font-semibold text-2xl mb-3 flex flex-col gap-1">
+              oii! sou o Artur Medeiros
+              <span className="text-sm uppercase text-gs-400 font-geist">
+                @arthurzop {">.<"}
+              </span>
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Sou UI &amp; Product Designer e trabalho na criação de produtos
-              que equilibram pensamento estratégico e clareza visual. Meu
-              trabalho passa por Product Design, Design Systems, Branding e
-              experiências editoriais, sempre começando pela tentativa de
-              entender o problema antes de desenhar a interface.
+              Sou um UI &amp; Product Designer em formação e trabalho na criação
+              de produtos que equilibram pensamento estratégico, consistência e
+              clareza visual. Além de UI/UX, hoje meu trabalho passa por Product
+              Design, Design Gráfico e Branding.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              Além dos projetos para clientes, vejo o design como uma prática
-              contínua de pesquisa, experimentação e documentação. É por isso
-              que este portfólio reúne projetos, textos e experimentos, formando
-              um arquivo em constante evolução de ideias, processos e
-              explorações visuais.
+              Além dos projetos para clientes, mantenho o design como uma
+              prática contínua de pesquisa, experimentação e documentação. Gosto
+              de explorar referências, testar ideias e registrar o que descubro
+              ao longo do processo. É por isso que este portfólio reúne
+              projetose e textos, funcionando também como um arquivo em
+              constante evolução do que estou pensando, estudando e construindo.
             </p>
           </div>
 

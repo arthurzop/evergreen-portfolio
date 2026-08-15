@@ -12,7 +12,7 @@ function extractToc(raw: string) {
 
     const level = match[1].length;
     const label = match[2].trim();
-    const id = slugger.slug(label); 
+    const id = slugger.slug(label);
 
     if (level === 2) toc.push({ id, label });
   }
@@ -38,6 +38,19 @@ const projects = s
   })
   .transform((data) => ({ ...data, toc: extractToc(data.raw) }));
 
+const writing = s
+  .object({
+    slug: s.slug("writing"),
+    title: s.string(),
+    subtitle: s.string(),
+    description: s.string(),
+    date: s.isodate(),
+    cover: s.image(),
+    raw: s.raw(),
+    body: s.mdx(),
+  })
+  .transform((data) => ({ ...data, toc: extractToc(data.raw) }));
+
 export default defineConfig({
   root: "content",
   collections: {
@@ -45,6 +58,11 @@ export default defineConfig({
       name: "Project",
       pattern: "projects/**/index.mdx",
       schema: projects,
+    },
+    writing: {
+      name: "Article",
+      pattern: "writing/**/index.mdx",
+      schema: writing,
     },
   },
   mdx: {
