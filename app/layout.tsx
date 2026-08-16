@@ -6,6 +6,7 @@ import Footer from "@/components/home-sections/Footer";
 import { GrainGradient } from "@paper-design/shaders-react";
 import { MotionConfig } from "motion/react";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${geistSans.variable} ${bricolage.variable}`}
     >
+      <Analytics />
       <body className="min-h-full flex flex-col text-night-black">
         <GrainGradient
           width="100%"
