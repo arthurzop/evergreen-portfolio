@@ -47,12 +47,12 @@ export function WritingPreview() {
         className="flex flex-col gap-6"
       >
         {articles.map((article) => (
-          <motion.div key={article.slug} variants={card}>
+          <motion.div key={article.slug} variants={card} className="flex flex-col">
             <Link
               href={`/writing/${article.slug}`}
-              className="group flex gap-6 items-center"
+              className="group flex flex-col lg:flex-row gap-6 items-center"
             >
-              <div className="relative aspect-video w-64 shrink-0 rounded-xl overflow-hidden">
+              <div className="relative aspect-video w-full lg:w-64 shrink-0 rounded-xl overflow-hidden ">
                 <Image
                   src={article.cover.src}
                   alt={article.title}
