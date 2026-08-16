@@ -6,6 +6,7 @@ import { ArticleHeader } from "@/components/article/ArticleHeader";
 import { ProjectNav } from "@/components/project/ProjectNav";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import SpyNav from "@/components/layout/SpyNav";
 
 export function generateStaticParams() {
   return writing.map((a) => ({ slug: a.slug }));
@@ -26,9 +27,9 @@ export default async function ArticlePage({
   const toc = article.toc.map((h) => ({ id: h.id, label: h.label }));
 
   return (
-    <article className="px-4 md:px-24 2xl:px-64 py-24 flex flex-col gap-16 font-geist mx-auto w-full bg-off-white/50">
+    <article className="px-4 md:px-24 2xl:px-64 py-8 flex flex-col gap-16 font-geist mx-auto w-full bg-off-white/50">
+      <SpyNav />
       <RegisterToc items={toc} />
-
       <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-8 w-fit divide-x divide-gs-400/50">
         <Link
           href="/writing"

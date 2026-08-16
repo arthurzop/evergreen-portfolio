@@ -16,7 +16,7 @@ export function ProjectNav({
 
   return (
     <div className="blcok lg:fixed flex gap-8 mx-4 items-center inset-x-4 md:inset-x-16 2xl:inset-x-64 top-8 justify-between">
-      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-4 xl:px-8 w-fit divide-x divide-gs-400/50">
+      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/40 shadow backdrop-blur-sm py-4 px-4 xl:px-8 w-fit divide-x divide-gs-400/50">
         <Link
           href="/projects"
           className="text-sm text-gray-600 hover:text-green-700 transition-colors"
@@ -34,14 +34,14 @@ export function ProjectNav({
           </span>
         </Link>
       </nav>
-      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-4 md:px-8  w-fit text-nowrap gap-x-4 md:w-150 divide-x divide-gs-400/50">
+      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/40 shadow backdrop-blur-sm py-4 px-4 md:px-8 w-fit text-nowrap gap-x-4 md:w-150 divide-x divide-gs-400/50">
         {prev ? (
           <Link
             href={`/projects/${prev.slug}`}
-            className="flex items-center gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors w-full "
+            className="flex items-center gap-2 text-sm text-gs-600 hover:text-green-700 transition-colors w-full "
           >
             <span>
-              <span className="flex gap-1 items-center text-xs text-gray-500 uppercase pe-4">
+              <span className="flex gap-1 items-center text-xs text-gs-500 uppercase pe-4">
                 <ArrowLeft size={14} className="block md:hidden" /> Projeto
                 Anterior
               </span>
@@ -58,10 +58,10 @@ export function ProjectNav({
         {next ? (
           <Link
             href={`/projects/${next.slug}`}
-            className="flex items-center justify-end gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors w-full text-right"
+            className="flex items-center justify-end gap-2 text-sm text-gs-600 hover:text-green-700 transition-colors w-full text-right"
           >
             <span>
-              <span className="flex gap-1 items-center text-xs text-gray-500 uppercase">
+              <span className="flex gap-1 items-center text-xs text-gs-500 uppercase">
                 Próximo Projeto{" "}
                 <ArrowRight size={14} className="block md:hidden" />
               </span>
