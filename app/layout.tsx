@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://artur-medeiros.vercel.app"),
   title: "Artur Medeiros — UI & Product Designer",
   description:
-    "UI & Product Designer based in São Paulo. An evergreen archive of projects, writing and experiments.",
+    "UI & Product Designer de São Paulo. Um arquivo evergreen de projetos, escritos e experimentos.",
   openGraph: {
     title: "Artur Medeiros — UI & Product Designer",
     description:
-      "UI & Product Designer based in São Paulo. An evergreen archive of projects, writing and experiments.",
+      "UI & Product Designer baseado em São Paulo. Um arquivo evergreen de projetos, escritos e experimentos.",
     url: "https://artur-medeiros.vercel.app",
     siteName: "Artur Medeiros",
     locale: "pt_BR",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Artur Medeiros — UI & Product Designer",
     description:
-      "UI & Product Designer based in São Paulo. An evergreen archive of projects, writing and experiments.",
+      "UI & Product Designer baseado em São Paulo. Um arquivo evergreen de projetos, escritos e experimentos.",
   },
 };
 

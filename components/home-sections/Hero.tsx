@@ -38,20 +38,18 @@ export function Hero() {
         </p>
         <p>
           Atualmente construindo um portfólio{" "}
-          <span className="hover:text-green-700 ">
-            evergreen
-          </span>{" "}
-          de projetos, textos e experimentos.
+          <span className="hover:text-green-700 ">evergreen</span> de projetos,
+          textos e experimentos.
         </p>
       </motion.div>
-      <div className="flex flex-col gap-4 absolute bottom-2 left-1/2 -translate-x-1/2 items-center">
+      <div className="flex flex-col gap-4 absolute bottom-2 left-1/2 -translate-x-1/2 items-center font-bricolage">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
           className="text-center text-gs-700 md:mt-10"
         >
-          Currently based in São Paulo, Brasil. <br />
+          @ são paulo ↔ brasil <br />
           <span className="hidden md:block mix-blend-multiply text-green-900/50">
             ฅ^•ﻌ•^ฅ
           </span>
