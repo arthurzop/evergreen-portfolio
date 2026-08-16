@@ -28,12 +28,16 @@ export default async function ProjectPage({
     <article className="px-4 md:px-24 2xl:px-64 py-32 flex flex-col gap-16 font-geist mx-auto w-full bg-off-white/50">
       <SpyNav />
       <RegisterToc items={toc} />
-      <ProjectNav prev={prev} next={next} fixed />
+      <ProjectNav
+        prev={prev}
+        next={next}
+        fixed
+        basePath="/projects"
+        backLabel="Todos os Projetos"
+      />
       <div className="flex flex-col px-4 rounded-2xl gap-2">
         <ProjectHeader project={project} />
-        <div
-          className="article prose prose-neutral max-w-none prose-h2:font-bricolage prose-h2:text-3xl prose-h2:font-bold prose-h2:mt-16 prose-h2:mb-4 prose-h3:font-bricolage prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-p:text-gray-600 prose-p:leading-relaxed prose-strong:text-black text-justify"
-        >
+        <div className="article prose prose-neutral max-w-none prose-h2:font-bricolage prose-h2:text-3xl prose-h2:font-bold prose-h2:mt-16 prose-h2:mb-4 prose-h3:font-bricolage prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-p:text-gray-600 prose-p:leading-relaxed prose-strong:text-black text-justify">
           <MdxContent code={project.body} />
         </div>
       </div>
