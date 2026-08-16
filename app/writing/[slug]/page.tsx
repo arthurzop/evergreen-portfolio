@@ -31,7 +31,7 @@ export default async function ArticlePage({
 
       <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-8 w-fit divide-x divide-gs-400/50">
         <Link
-          href="/projects"
+          href="/writing"
           className="text-sm text-gray-600 hover:text-green-700 transition-colors"
         >
           <span>

@@ -7,7 +7,6 @@ import Image from "next/image";
 import artur from "@/public/artur.jpeg";
 import Link from "next/link";
 
-
 const links = [
   { label: "linkedin", href: "https://linkedin.com/in/arthurzop" },
   { label: "substack", href: "https://substack.com/@arthurzop" },
@@ -16,6 +15,7 @@ const links = [
 ];
 
 const EMAIL = "medeirosartur48@gmail.com";
+const INSTAGRAM = "https://instagram.com/arthurzop";
 
 export function AboutPreview() {
   const ref = useRef(null);
@@ -62,9 +62,9 @@ export function AboutPreview() {
           <div className="">
             <h3 className="font-bricolage font-semibold text-2xl mb-3 flex flex-col gap-1">
               oii! sou o Artur Medeiros
-              <span className="text-sm uppercase text-gs-400 font-geist">
+              <Link href={INSTAGRAM} target="_blank"  className="text-sm uppercase text-gs-400 font-geist hover:text-green-700">
                 @arthurzop {">.<"}
-              </span>
+              </Link>
             </h3>
             <p className="text-gray-600 leading-relaxed">
               Sou um UI &amp; Product Designer em formação e trabalho na criação

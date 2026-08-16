@@ -13,8 +13,8 @@ export default function WritingIndexPage() {
       <div className="font-bricolage flex flex-col gap-2">
         <h1 className="text-6xl font-bold capitalize">/writing</h1>
         <p className="text-gs-400 flex items-center gap-2 w-fit">
-          <span>↳</span> essays, research and reflections exploring design
-          beyond the interface.
+          <span>↳</span> ensaios, pesquisas e reflexões sobre design para além
+          da interface.
         </p>
       </div>
 
