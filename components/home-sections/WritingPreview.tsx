@@ -27,10 +27,7 @@ export function WritingPreview() {
     .slice(0, 2);
 
   return (
-    <Section
-      id="writing"
-      className="justify-between bg-off-white/50"
-    >
+    <Section id="writing" className="justify-between bg-off-white/50">
       <div className="font-bricolage flex flex-col gap-2">
         <h2 className="text-6xl font-bold capitalize">/escrita</h2>
         <p className="text-gs-400 hover:text-gs-600 flex items-center gap-2 w-fit">
@@ -47,7 +44,11 @@ export function WritingPreview() {
         className="flex flex-col gap-6"
       >
         {articles.map((article) => (
-          <motion.div key={article.slug} variants={card} className="flex flex-col">
+          <motion.div
+            key={article.slug}
+            variants={card}
+            className="flex flex-col"
+          >
             <Link
               href={`/writing/${article.slug}`}
               className="group flex flex-col lg:flex-row gap-6 items-center"
@@ -71,6 +72,7 @@ export function WritingPreview() {
                       day: "2-digit",
                       month: "short",
                       year: "numeric",
+                      timeZone: "UTC",
                     })}
                   </span>
                 </div>

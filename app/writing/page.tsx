@@ -44,6 +44,7 @@ export default function WritingIndexPage() {
                     day: "2-digit",
                     month: "short",
                     year: "numeric",
+                    timeZone: "UTC",
                   })}
                 </span>
               </div>
