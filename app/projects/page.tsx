@@ -5,7 +5,7 @@ import { projects } from "#site/content";
 
 export default function ProjectsIndexPage() {
   return (
-    <main className="px-8 lg:px-64 py-24 md:py-16 flex flex-col gap-12 font-geist bg-off-white/50 min-h-screen">
+    <main className="px-4 md:px-24 2xl:px-64 py-24 md:py-16 flex flex-col gap-12 font-geist bg-off-white/50 min-h-screen">
       <div className="font-bricolage flex flex-col gap-2">
         <h1 className="text-6xl font-bold capitalize">/projetos</h1>
 

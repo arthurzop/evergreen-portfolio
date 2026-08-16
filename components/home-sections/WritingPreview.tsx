@@ -29,7 +29,7 @@ export function WritingPreview() {
   return (
     <Section
       id="writing"
-      className="flex flex-col justify-center px-8 lg:px-64 gap-8 font-geist bg-off-white/50"
+      className="justify-between bg-off-white/50"
     >
       <div className="font-bricolage flex flex-col gap-2">
         <h2 className="text-6xl font-bold capitalize">/escrita</h2>

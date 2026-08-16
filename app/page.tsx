@@ -9,10 +9,10 @@ import { AboutPreview } from "@/components/home-sections/AboutSection";
 
 const homeToc = [
   { id: "hero", label: "Intro" },
-  { id: "featured", label: "Featured" },
-  { id: "projects", label: "Projects" },
-  { id: "writing", label: "Writing" },
-  { id: "about", label: "About" },
+  { id: "featured", label: "Em Destaque" },
+  { id: "projects", label: "Projetos" },
+  { id: "writing", label: "Escrita" },
+  { id: "about", label: "Sobre Mim" },
 ];
 
 export default function Home() {

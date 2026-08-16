@@ -8,16 +8,16 @@ import cover from "@/content/projects/the-thirteen/cover.png";
 
 const stats = [
   {
-    label: "Papel",
+    label: "Meu Papel",
     value: "Product Design, Visual Design, Desenvolvimento Web",
   },
   {
-    label: "Tipo",
-    value: "Projeto pessoal, Arquivo digital",
+    label: "Tipo de Projeto",
+    value: "Pessoal",
   },
   {
-    label: "Foco",
-    value: "Curadoria, Arquitetura da Informação, Sistemas Visuais",
+    label: "Habilidades",
+    value: "Arquitetura da Informação, Sistemas Visuais",
   },
   {
     label: "Tecnologias",
@@ -30,10 +30,7 @@ export function Featured() {
   const isInView = useInView(ref, { once: true, margin: "-15%" });
 
   return (
-    <Section
-      id="featured"
-      className="flex flex-col justify-center px-4 lg:px-64 font-geist"
-    >
+    <Section id="featured">
       <div className="flex flex-col gap-4 lg:gap-8 bg-off-white/20 backdrop-blur-lg p-8 rounded-2xl border border-gs-200">
         <div className="font-bricolage flex flex-col gap-2">
           <p className="text-gs-500 uppercase tracking-wider text-sm">
@@ -50,7 +47,7 @@ export function Featured() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex flex-col lg:grid grid-cols-[1.4fr_1fr] gap-12 items-start h-auto "
+          className="flex flex-col xl:grid grid-cols-[1.4fr_1fr] gap-12 items-start h-auto "
         >
           <Image
             alt="Cover for Featured Project"

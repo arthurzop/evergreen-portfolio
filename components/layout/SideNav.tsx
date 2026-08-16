@@ -44,9 +44,12 @@ export default function SideNav() {
           </div>
         )}
         <div className="flex flex-col h-auto rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm px-3 py-12 gap-16 justify-center items-center">
-          <p className="text-black [writing-mode:vertical-rl] text-nowrap font-medium text-xl">
+          <Link
+            href="/"
+            className="text-true-black [writing-mode:vertical-rl] text-nowrap font-medium text-xl cursor-pointer"
+          >
             artur medeiros
-          </p>
+          </Link>
           <motion.nav
             variants={container}
             initial="hidden"
@@ -82,7 +85,12 @@ export default function SideNav() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="flex lg:hidden fixed top-4 rounded-full inset-x-0 z-20 h-14 items-center justify-between mx-4 border border-white/20 bg-white/10 py-4 px-8 shadow-xl backdrop-blur-md"
       >
-        <span className="font-medium text-sm">artur medeiros</span>
+        <Link
+          href="/"
+          className="text-true-black text-nowrap font-medium text-xl cursor-pointer tracking-tight"
+        >
+          artur medeiros
+        </Link>
         <nav className="flex items-center gap-2 divide-x divide-gray-300/70">
           {navItems.map(({ href, icon: Icon, label }) => {
             const isActive = pathname === href;

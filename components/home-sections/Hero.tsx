@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <Section
       id="hero"
-      className="flex flex-col justify-center items-center text-center gap-6 md:gap-12 font-geist px-4 lg:px-64"
+      className="justify-center items-center text-center gap-6 md:gap-12 "
     >
       <motion.p
         initial={{ opacity: 0, y: 12 }}

@@ -15,34 +15,37 @@ export function ProjectNav({
   if (!prev && !next) return null;
 
   return (
-    <div className="fixed flex gap-8 mx-4 items-center inset-x-64 top-8 justify-between">
-      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-8 w-fit divide-x divide-gs-400/50">
+    <div className="blcok lg:fixed flex gap-8 mx-4 items-center inset-x-4 md:inset-x-16 2xl:inset-x-64 top-8 justify-between">
+      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-4 xl:px-8 w-fit divide-x divide-gs-400/50">
         <Link
           href="/projects"
           className="text-sm text-gray-600 hover:text-green-700 transition-colors"
         >
-          <span>
+          <span className="flex flex-row-reverse gap-2 md:flex-col md:gap-0">
             <span className="block text-xs text-gray-500 uppercase">
               Voltar
             </span>
             <span className="flex items-center gap-1">
               <ArrowLeft size={14} />
-              Todos os Projetos
+              <span className="hidden md:block text-nowrap">
+                Todos os Projetos
+              </span>
             </span>
           </span>
         </Link>
       </nav>
-      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-8 w-150 divide-x divide-gs-400/50">
+      <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm py-4 px-4 md:px-8  w-fit text-nowrap gap-x-4 md:w-150 divide-x divide-gs-400/50">
         {prev ? (
           <Link
             href={`/projects/${prev.slug}`}
             className="flex items-center gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors w-full "
           >
             <span>
-              <span className="block text-xs text-gray-500 uppercase">
-                Projeto Anterior
+              <span className="flex gap-1 items-center text-xs text-gray-500 uppercase pe-4">
+                <ArrowLeft size={14} className="block md:hidden" /> Projeto
+                Anterior
               </span>
-              <span className="flex items-center gap-1">
+              <span className="hidden md:flex items-center gap-1">
                 <ArrowLeft size={14} />
                 {prev.title}
               </span>
@@ -58,10 +61,11 @@ export function ProjectNav({
             className="flex items-center justify-end gap-2 text-sm text-gray-600 hover:text-green-700 transition-colors w-full text-right"
           >
             <span>
-              <span className="block text-xs text-gray-500 uppercase">
-                Próximo Projeto
+              <span className="flex gap-1 items-center text-xs text-gray-500 uppercase">
+                Próximo Projeto{" "}
+                <ArrowRight size={14} className="block md:hidden" />
               </span>
-              <span className="flex items-center gap-1">
+              <span className="hidden md:flex items-center gap-1 ">
                 {next.title}
                 <ArrowRight size={14} />
               </span>

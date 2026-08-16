@@ -31,7 +31,7 @@ export function AboutPreview() {
   return (
     <Section
       id="about"
-      className="py-24 md:py-0 flex flex-col justify-center px-8 lg:px-64 gap-8 font-geist bg-off-white/50 items-center"
+      className="bg-off-white/50 items-center"
     >
       <div className="font-bricolage flex flex-col gap-2 w-full">
         <h2 className="text-6xl font-bold capitalize">/sobre mim</h2>
@@ -46,7 +46,7 @@ export function AboutPreview() {
         initial={{ opacity: 0, y: 24 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="flex flex-col lg:flex-row justify-between w-full gap-12"
+        className="flex flex-col xl:flex-row justify-between w-full gap-12"
       >
         <div className="relative aspect-video w-full h-full rounded-xl overflow-hidden">
           <Image
@@ -62,7 +62,11 @@ export function AboutPreview() {
           <div className="">
             <h3 className="font-bricolage font-semibold text-2xl mb-3 flex flex-col gap-1">
               oii! sou o Artur Medeiros
-              <Link href={INSTAGRAM} target="_blank"  className="text-sm uppercase text-gs-400 font-geist hover:text-green-700">
+              <Link
+                href={INSTAGRAM}
+                target="_blank"
+                className="text-sm uppercase text-gs-400 font-geist hover:text-green-700"
+              >
                 @arthurzop {">.<"}
               </Link>
             </h3>

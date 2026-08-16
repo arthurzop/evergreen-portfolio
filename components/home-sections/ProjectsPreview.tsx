@@ -26,7 +26,7 @@ export function ProjectsPreview() {
   return (
     <Section
       id="projects"
-      className="flex flex-col justify-center py-24 md:py-0 px-8 lg:px-64 gap-8 font-geist bg-linear-to-b to-off-white/50"
+      className="justify-between bg-linear-to-b to-off-white/50"
     >
       <div className="font-bricolage flex flex-col gap-2">
         <h2 className="text-6xl font-bold capitalize">/projetos</h2>
@@ -73,10 +73,7 @@ export function ProjectsPreview() {
       </motion.div>
 
       <div className="flex items-center justify-end">
-        <LinkButton
-          text="ver todos os projetos"
-          href="/projects"
-        ></LinkButton>
+        <LinkButton text="ver todos os projetos" href="/projects"></LinkButton>
       </div>
     </Section>
   );
