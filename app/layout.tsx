@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Bricolage_Grotesque } from "next/font/google";
 import SideNav from "@/components/layout/SideNav";
 import { TocProvider } from "@/lib/toc-context";
-import "./globals.css";
 import Footer from "@/components/home-sections/Footer";
 import { GrainGradient } from "@paper-design/shaders-react";
+import { MotionConfig } from "motion/react";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,18 +18,15 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arturmedeiros.vercel.app"),
-  title: {
-    default: "Artur Medeiros — UI & Product Designer",
-    template: "%s — Artur Medeiros",
-  },
+  metadataBase: new URL("https://artur-medeiros.vercel.app"),
+  title: "Artur Medeiros — UI & Product Designer",
   description:
     "UI & Product Designer based in São Paulo. An evergreen archive of projects, writing and experiments.",
   openGraph: {
     title: "Artur Medeiros — UI & Product Designer",
     description:
       "UI & Product Designer based in São Paulo. An evergreen archive of projects, writing and experiments.",
-    url: "https://arturmedeiros.vercel.app",
+    url: "https://artur-medeiros.vercel.app",
     siteName: "Artur Medeiros",
     locale: "pt_BR",
     type: "website",
@@ -60,11 +58,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           speed={1}
           className="fixed -z-10 inset-0 opacity-60"
         />
-        <TocProvider>
-          <SideNav />
-          {children}
-        </TocProvider>
-        <Footer />
+        <MotionConfig reducedMotion="user">
+          <TocProvider>
+            <SideNav />
+            {children}
+          </TocProvider>
+          <Footer />
+        </MotionConfig>
       </body>
     </html>
   );
