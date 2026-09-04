@@ -4,7 +4,7 @@ import { projects, writing } from "#site/content";
 const BASE_URL = "https://artur-medeiros.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/projects", "/writing", "/about"].map((route) => ({
+  const staticRoutes = ["", "/projects", "/writing", "/about", "/visuals"].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),
   }));

@@ -51,6 +51,15 @@ const writing = s
   })
   .transform((data) => ({ ...data, toc: extractToc(data.raw) }));
 
+const visuals = s.object({
+  slug: s.slug("visuals"),
+  title: s.string(),
+  type: s.string(),
+  date: s.isodate(),
+  tags: s.array(s.string()).default([]),
+  images: s.array(s.image()),
+});
+
 export default defineConfig({
   root: "content",
   collections: {
@@ -63,6 +72,11 @@ export default defineConfig({
       name: "Article",
       pattern: "writing/**/index.mdx",
       schema: writing,
+    },
+    visuals: {
+      name: "Visual",
+      pattern: "visuals/**/index.mdx",
+      schema: visuals,
     },
   },
   mdx: {
