@@ -46,29 +46,29 @@ export function VisualModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-off-white/20 backdrop-blur-xl flex items-center justify-center p-6 lg:p-16"
+      className="fixed inset-0 z-50 bg-off-white/20 backdrop-blur-xl flex items-center justify-center p-4 lg:p-16"
       onClick={onClose}
     >
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 text-gs-600 hover:text-black transition-colors flex gap-1 text-sm uppercase items-center cursor-pointer"
+        className="absolute top-4 right-4 lg:top-6 lg:right-6 text-gs-600 hover:text-black transition-colors flex gap-1 text-sm uppercase items-center cursor-pointer p-2 "
       >
-        ESC
+        <span className="hidden md:block"></span>
         <X size={22} />
       </button>
 
       <div
-        className="flex flex-col lg:flex-row items-center justify-center gap-5 w-full h-full max-w-6xl rounded-xl border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm"
+        className="flex flex-col lg:flex-row items-center justify-center gap-5 w-full max-h-full min-h-[60vh] lg:h-full max-w-6xl rounded-xl border border-off-white/20 bg-true-white/50 shadow backdrop-blur-sm overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex flex-col items-center gap-4 h-full justify-center">
+        <div className="flex flex-col items-center gap-4 justify-center px-4 pt-6 lg:px-0 lg:pt-0 lg:h-full">
           <Image
             key={current.src}
             src={current.src}
             alt={visual.title}
             width={current.width}
             height={current.height}
-            className="max-w-[90%] max-h-[85vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
+            className="max-w-full max-h-[42vh] lg:max-w-[90%] lg:max-h-[85vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
             priority
           />
 
@@ -107,7 +107,7 @@ export function VisualModal({
           )}
         </div>
 
-        <div className="flex flex-col gap-6 p-8 ps-2">
+        <div className="flex flex-col gap-6 p-6 pt-2 text-center lg:p-8 lg:ps-2 lg:text-left">
           <div>
             <h2 className="font-bricolage text-xl font-semibold">
               {visual.title}
@@ -116,9 +116,9 @@ export function VisualModal({
           </div>
 
           {visual.tags.length > 0 && (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 items-center lg:items-start">
               <p className="text-gs-600 text-sm uppercase">tags:</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 {visual.tags.map((tag) => (
                   <span
                     key={tag}

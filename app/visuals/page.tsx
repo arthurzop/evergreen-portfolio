@@ -20,7 +20,7 @@ export default function VisualsPage() {
         </p>
       </div>
 
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+      <div className="columns-1 sm:columns-2 lg:columns-4 gap-4">
         {visuals.map((visual) => (
           <button
             key={visual.slug}
