@@ -6,6 +6,7 @@ import { Featured } from "@/components/home-sections/Featured";
 import { ProjectsPreview } from "@/components/home-sections/ProjectsPreview";
 import { WritingPreview } from "@/components/home-sections/WritingPreview";
 import { AboutPreview } from "@/components/home-sections/AboutSection";
+import ContactButton from "@/components/ui/ContactButton";
 
 const homeToc = [
   { id: "hero", label: "Intro" },
@@ -19,7 +20,9 @@ export default function Home() {
   return (
     <main>
       <RegisterToc items={homeToc} />
-
+      <div className="absolute bottom-10 right-10">
+        <ContactButton />
+      </div>
       <SpyNav />
       <Hero />
       <Featured />

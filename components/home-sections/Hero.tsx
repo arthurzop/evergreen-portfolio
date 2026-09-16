@@ -30,16 +30,13 @@ export function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-        className="flex flex-col md:text-lg px-4 text-center items-center text-gs-800"
+        className="flex flex-col md:text-lg px-4 text-center items-center text-gs-800 max-w-3/5 gap-2"
       >
         <p>
-          Eu desenvolvo produtos digitais unindo pesquisa, sistemas e pensamento
-          visual.
-        </p>
-        <p>
-          Atualmente construindo um portfólio{" "}
-          <span className="hover:text-green-700 ">evergreen</span> de projetos,
-          textos e experimentos.
+          Pesquiso, estruturo e desenvolvo produtos digitais que alinham
+          pensamento de produto, usabilidade e uma execução visual bem refinada.
+          Estou sempre desenvolvendo pequenos experimentos, estudando novas
+          abordagens e registrando o processo.
         </p>
       </motion.div>
       <div className="flex flex-col gap-4 absolute bottom-2 left-1/2 -translate-x-1/2 items-center font-bricolage">

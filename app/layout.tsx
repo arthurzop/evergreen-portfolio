@@ -1,12 +1,13 @@
+import SideNav from "@/components/layout/SideNav";
+import Footer from "@/components/home-sections/Footer";
+import TopButton from "@/components/ui/TopButton";
 import type { Metadata } from "next";
 import { Geist, Bricolage_Grotesque } from "next/font/google";
-import SideNav from "@/components/layout/SideNav";
 import { TocProvider } from "@/lib/toc-context";
-import Footer from "@/components/home-sections/Footer";
 import { GrainGradient } from "@paper-design/shaders-react";
 import { MotionConfig } from "motion/react";
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </TocProvider>
           <Footer />
+          <TopButton/>
         </MotionConfig>
       </body>
     </html>

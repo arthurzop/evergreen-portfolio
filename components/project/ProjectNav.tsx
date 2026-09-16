@@ -21,7 +21,7 @@ export function ProjectNav({
   const hasBoth = Boolean(prev) && Boolean(next);
 
   return (
-    <div className="block lg:fixed flex gap-8 mx-4 items-center inset-x-4 md:inset-x-16 2xl:inset-x-64 top-8 justify-between">
+    <div className="lg:fixed flex gap-8 mx-4 items-center inset-x-4 md:inset-x-16 2xl:inset-x-64 top-8 justify-between">
       <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/40 shadow backdrop-blur-sm py-4 px-4 xl:px-8 w-fit divide-x divide-gs-400/50">
         <Link
           href={basePath}

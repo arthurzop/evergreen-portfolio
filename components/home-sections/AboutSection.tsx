@@ -65,7 +65,7 @@ export function AboutPreview() {
               <Link
                 href={INSTAGRAM}
                 target="_blank"
-                className="text-sm uppercase text-gs-400 font-geist hover:text-green-700"
+                className="text-sm uppercase text-gs-400 font-geist hover:text-green-700 hover:-rotate-z-1"
               >
                 @arthurzop {">.<"}
               </Link>

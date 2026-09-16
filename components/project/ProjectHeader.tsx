@@ -1,5 +1,3 @@
-import * as L from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 
 type Project = {
@@ -8,13 +6,10 @@ type Project = {
   category: string[];
   type: string;
   year: string;
-  links: { label: string; url: string }[];
   cover: { src: string; width: number; height: number };
 };
 
 export function ProjectHeader({ project }: { project: Project }) {
-  const hasLinks = project.links.length > 0;
-
   return (
     <header className="flex flex-col gap-6 py-2">
       <div className="flex flex-col gap-4">
@@ -38,27 +33,6 @@ export function ProjectHeader({ project }: { project: Project }) {
           </span>
         </div>
 
-        {hasLinks && (
-          <>
-            <div className="flex justify-between items-center gap-4">
-              <p className=" uppercase text-sm text-gray-500">Links:</p>
-              <div className="flex flex-wrap gap-2 justify-end">
-                {project.links.map((link) => (
-                  <Link
-                    key={link.url}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex w-fit items-center justify-center gap-2 rounded-full bg-white/20 px-6 py-1 font-light text-[#5f5f5f] shadow-md ring-1 ring-black/3 transition-colors hover:text-gray-900 hover:ring-black/10 font-geist"
-                  >
-                    {link.label}
-                    <L.ArrowUpRight size={16} strokeWidth={1.5} />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </>
-        )}
         <div className="relative aspect-video rounded-xl overflow-hidden">
           <Image
             src={project.cover.src}

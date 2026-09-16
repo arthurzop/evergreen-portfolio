@@ -24,7 +24,7 @@ export function WritingPreview() {
 
   const articles = [...writing]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 2);
+    .slice(0, 3);
 
   return (
     <Section id="writing" className="justify-between bg-off-white/50">
