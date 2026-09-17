@@ -23,7 +23,7 @@ export default function ContactButton() {
       onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="isolate cursor-pointer flex items-center justify-center w-fit h-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 font-geist font-light text-gs-500 shadow-xl backdrop-blur-md overflow-hidden hover:text-gray-700"
+      className="isolate cursor-pointer flex items-center justify-center w-fit h-fit rounded-full bg-off-white/70 backdrop-blur-lg px-4 py-4 font-geist font-light text-sm shadow-xl overflow-hidden"
     >
       <motion.span
         initial={false}

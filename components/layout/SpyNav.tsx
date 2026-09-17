@@ -26,7 +26,7 @@ export default function SpyNav() {
     <nav
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="fixed hidden md:flex flex-col gap-2 right-8 top-1/2 -translate-y-1/2 z-10 p-4 bg-off-white/70 backdrop-blur-lg rounded-2xl border border-gs-200 transition-all duration-200 w-auto"
+      className="fixed hidden md:flex flex-col gap-2 right-8 top-1/2 -translate-y-1/2 z-10 p-4 bg-off-white/70 backdrop-blur-lg border border-gs-200 rounded-2xl  transition-all duration-200 w-auto"
     >
       {items.map((item) => {
         const isActive = item.id === activeId;

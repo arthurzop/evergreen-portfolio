@@ -25,7 +25,7 @@ O MDX resolve as duas pontas ao mesmo tempo: entrega a leveza do Markdown (docum
 Em vez de criar um componente específico para cada projeto, escrevo algo como:
 
 ```md
-## Overview
+##Overview
 
 The Thirteen é um arquivo visual criado...
 
@@ -33,14 +33,14 @@ A ideia surgiu da necessidade de...
 
 ![Interface do projeto](./images/interface.jpg)
 
-## Design System
+##Design System
 
 A interface utiliza...
 ```
 
 A partir dessa estrutura, dois comportamentos acontecem automaticamente sem a necessidade de lógica adicional:
 
-- **Índice dinâmico:** cada heading (`##` ou `###`) vira uma seção navegável no índice lateral (TOC) da página, extraído diretamente do texto.
+- **Índice dinâmico:** cada heading (`##`) vira uma seção navegável no índice lateral (TOC) da página, extraído diretamente do texto.
 - **Gestão de assets:** as imagens referenciadas com caminho relativo (`./images/interface.jpg`) são processadas, copiadas e otimizadas de forma automática, mantendo o contexto visual atrelado ao arquivo.
 
 Quando o conteúdo pede algo que o Markdown não cobre por padrão, como uma galeria, um embed ou uma comparação lado a lado, insiro um componente React no meio do texto. O documento continua sendo a fonte de verdade; o componente só existe para apresentar melhor aquele trecho específico.
