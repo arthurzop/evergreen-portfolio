@@ -60,22 +60,19 @@ export function Featured() {
               <h3 className="font-semibold mb-2 text-3xl font-bricolage first-letter:capitalize">
                 sobre o projeto
               </h3>
-              <p className="text-gs-700 leading-relaxed">
+              <p className="text-justify md:text-left text-gs-700 leading-relaxed">
                 The Thirteen é um arquivo pessoal criado a partir da ideia de
                 que boas referências merecem mais do que um bookmark. O projeto
                 reúne identidades visuais, interfaces, tipografia, trabalhos
                 editoriais e outras referências em um sistema estruturado para
-                exploração e curadoria contínua.
-              </p>
-              <p className="text-gs-700 leading-relaxed">
-                O projeto investiga como uma coleção pessoal pode se transformar
-                em uma ferramenta de design, organizando referências dispersas
-                em uma linguagem visual que pode ser revisitada, expandida e
-                conectada ao longo do tempo.
+                exploração e curadoria contínua. O projeto investiga como uma
+                coleção pessoal pode se transformar em uma ferramenta de design,
+                organizando referências dispersas em uma linguagem visual que
+                pode ser revisitada, expandida e conectada ao longo do tempo.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="hidden md:grid grid-cols-2 gap-4">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="text-xs text-gs-500 uppercase tracking-wider">

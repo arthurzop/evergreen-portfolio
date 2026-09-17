@@ -41,7 +41,7 @@ export function WritingPreview() {
         variants={container}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
-        className="flex flex-col gap-6"
+        className="flex flex-col gap-8 "
       >
         {articles.map((article) => (
           <motion.div
@@ -80,7 +80,7 @@ export function WritingPreview() {
                   {article.description}
                 </p>
                 <span className="inline-flex items-center gap-1 text-sm mt-2 text-gray-700 group-hover:text-green-700 transition-colors w-fit">
-                  view <ArrowUpRight size={14} />
+                  ver artigo <ArrowUpRight size={14} />
                 </span>
               </div>
             </Link>
@@ -89,7 +89,7 @@ export function WritingPreview() {
       </motion.div>
 
       <div className="flex items-center justify-end">
-        <LinkButton text="or view all texts" href="/writing" />
+        <LinkButton text="ver todos os textos" href="/writing" />
       </div>
     </Section>
   );

@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <Section
       id="hero"
-      className="justify-center items-center text-center gap-6 md:gap-12 "
+      className="justify-center items-center text-center gap-6 md:gap-12"
     >
       <motion.p
         initial={{ opacity: 0, y: 12 }}
@@ -20,7 +20,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-        className="font-bricolage text-7xl lg:text-[200px] lg:leading-42 font-semibold mix-blend-multiply text-green-900/50"
+        className="font-bricolage text-[clamp(3.5rem,min(10.5vw,20vh),12.5rem)] leading-[0.85] font-semibold mix-blend-multiply text-green-900/50"
       >
         UI & Product <br />
         Designer
@@ -30,7 +30,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-        className="flex flex-col md:text-lg px-4 text-center items-center text-gs-800 max-w-3/5 gap-2"
+        className="flex flex-col md:text-lg px-4 text-center items-center text-gs-800 lg:max-w-3/5 gap-2"
       >
         <p>
           Pesquiso, estruturo e desenvolvo produtos digitais que alinham

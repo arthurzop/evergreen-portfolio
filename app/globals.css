@@ -40,6 +40,10 @@
   --color-gs-900: var(--gs-900);
 }
 
+* {
+  transition: all 1s;
+}
+
 html {
   scroll-behavior: smooth;
 }

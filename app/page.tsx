@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main>
       <RegisterToc items={homeToc} />
-      <div className="absolute bottom-10 right-10">
+      <div className="absolute bottom-4 md:bottom-10 right-4 md:right-10">
         <ContactButton />
       </div>
       <SpyNav />

@@ -21,7 +21,7 @@ export function ProjectNav({
   const hasBoth = Boolean(prev) && Boolean(next);
 
   return (
-    <div className="lg:fixed flex gap-8 mx-4 items-center inset-x-4 md:inset-x-16 2xl:inset-x-64 top-8 justify-between">
+    <div className="lg:fixed flex gap-8 mx-2 items-center inset-x-4 md:inset-x-16 2xl:inset-x-64 top-8 justify-between">
       <nav className="flex items-center justify-between rounded-full border border-off-white/20 bg-true-white/40 shadow backdrop-blur-sm py-4 px-4 xl:px-8 w-fit divide-x divide-gs-400/50">
         <Link
           href={basePath}
@@ -53,7 +53,7 @@ export function ProjectNav({
           >
             <span className="min-w-0">
               <span className="flex gap-1 items-center text-xs text-gs-500 uppercase pe-4 text-nowrap">
-                <ArrowLeft size={14} className="block md:hidden" /> Anterior
+                <ArrowLeft size={14} className="block md:hidden shrink-0" /> Anterior
               </span>
               <span className="hidden md:flex items-center gap-1 min-w-0">
                 <ArrowLeft size={14} className="shrink-0" />

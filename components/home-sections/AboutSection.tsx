@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { ArrowUpRight, Copy, Check } from "lucide-react";
 import { Section } from "@/components/layout/Section";
+import LinkButton from "../ui/LinkButton";
 import Image from "next/image";
 import artur from "@/public/artur.jpeg";
 import Link from "next/link";
@@ -29,10 +30,7 @@ export function AboutPreview() {
   }
 
   return (
-    <Section
-      id="about"
-      className="bg-off-white/50 items-center"
-    >
+    <Section id="about" className="bg-off-white/50 items-center">
       <div className="font-bricolage flex flex-col gap-2 w-full">
         <h2 className="text-6xl font-bold capitalize">/sobre mim</h2>
         <p className="text-gs-400 hover:text-gs-600 flex items-center gap-2 w-fit">
@@ -87,25 +85,22 @@ export function AboutPreview() {
           </div>
 
           <div className="flex flex-col gap-4 h-fit">
+            <span className="pt-4">entre em contato ou veja mais sobre mim:</span>
             <div className="flex flex-col md:flex-row pt-4 gap-2 lg:w-full justify-between">
               {links.map((link) => (
-                <Link
+                <LinkButton
                   key={link.label}
+                  text={link.label}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center gap-1 text-sm bg-gs-200 hover:bg-gs-300 transition-colors rounded-full px-8 py-2 justify-center"
-                >
-                  {link.label} <ArrowUpRight size={14} />
-                </Link>
+                ></LinkButton>
               ))}
             </div>
 
             <button
               onClick={handleCopy}
-              className="inline-flex items-center gap-1 text-sm bg-gs-200 hover:bg-gs-300 transition-colors rounded-full px-8 py-2 w-full justify-center cursor-pointer"
+              className="isolate cursor-pointer w-full flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-1  font-geist font-light text-gs-600 shadow-xl backdrop-blur-md transition-colors hover:text-gray-900"
             >
-              {copied ? "copied!" : EMAIL}
+              {copied ? "copiado!" : EMAIL}
               {copied ? (
                 <Check size={14} className="text-green-700" />
               ) : (

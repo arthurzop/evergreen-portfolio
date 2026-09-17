@@ -34,7 +34,7 @@ export default function TopButton() {
           onClick={handleClick}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="fixed bottom-8 right-8 z-30 isolate cursor-pointer flex items-center justify-center w-fit h-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 font-geist font-light text-[#5f5f5f] shadow-xl backdrop-blur-md overflow-hidden"
+          className="fixed bottom-8 right-8 z-30 isolate cursor-pointer hidden md:flex items-center justify-center w-fit h-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 font-geist font-light text-[#5f5f5f] shadow-xl backdrop-blur-md overflow-hidden "
         >
           <motion.span
             initial={false}

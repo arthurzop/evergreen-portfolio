@@ -33,7 +33,7 @@ export default function ContactButton() {
           marginRight: hovered ? 8 : 0,
         }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="inline-block overflow-hidden whitespace-nowrap"
+        className="hidden md:inline-block overflow-hidden whitespace-nowrap"
       >
         entre em contato
       </motion.span>

@@ -42,7 +42,7 @@ export function ProjectsPreview() {
         variants={container}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
-        className="flex flex-col gap-4 md:grid grid-cols-3 md:gap-6"
+        className="flex flex-col gap-8 xl:grid grid-cols-3"
       >
         {featured.map((project) => (
           <motion.div key={project.slug} variants={card}>
@@ -56,15 +56,15 @@ export function ProjectsPreview() {
                   sizes="(min-width: 1024px) 33vw, 100vw"
                 />
               </div>
-              <div className="flex justify-between items-end">
+              <div className="flex flex-col justify-between items-end">
                 <div className="flex flex-col">
                   <h3 className="font-semibold text-2xl font-bricolage capitalize">
                     {project.title}
                   </h3>
                   <p className="text-sm text-gray-500">{project.description}</p>
                 </div>
-                <span className="inline-flex items-center gap-1 text-sm mt-2 text-gray-700 group-hover:text-green-700 transition-colors">
-                  view <ArrowUpRight size={14} />
+                <span className="inline-flex items-center gap-1 text-sm mt-2 text-gray-700 group-hover:text-green-700 transition-colors w-fit text-nowrap">
+                  ver projeto <ArrowUpRight size={14} />
                 </span>
               </div>
             </Link>
