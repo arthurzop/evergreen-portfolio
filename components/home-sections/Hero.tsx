@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "motion/react";
 import { Section } from "@/components/layout/Section";
+import Link from "next/link";
 
 export function Hero() {
+  const easter_egg = "https://youtu.be/RKybAhTw8iE";
   return (
     <Section
       id="hero"
@@ -47,9 +49,13 @@ export function Hero() {
           className="text-center text-gs-700 md:mt-10"
         >
           @ são paulo ↔ brasil <br />
-          <span className="hidden md:block mix-blend-multiply text-green-900/50">
+          <Link
+            href={easter_egg}
+            target="_blank"
+            className="hidden md:block mix-blend-multiply text-green-900/50 hover:text-green-900/90"
+          >
             ฅ^•ﻌ•^ฅ
-          </span>
+          </Link>
         </motion.p>
       </div>
     </Section>
